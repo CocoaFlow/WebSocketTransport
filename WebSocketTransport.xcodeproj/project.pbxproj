@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA674BD219AD91730064D5A4 /* WebSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = DA674BD119AD91730064D5A4 /* WebSocketTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA674BDC19AD91730064D5A4 /* WebSocketTransportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674BDB19AD91730064D5A4 /* WebSocketTransportTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA674BD019AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA674BD119AD91730064D5A4 /* WebSocketTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketTransport.h; sourceTree = "<group>"; };
+		DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketTransportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA674BDA19AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA674BDB19AD91730064D5A4 /* WebSocketTransportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTransportTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA674BC819AD91730064D5A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA674BD419AD91730064D5A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA674BC219AD91730064D5A4 = {
+			isa = PBXGroup;
+			children = (
+				DA674BCE19AD91730064D5A4 /* WebSocketTransport */,
+				DA674BD819AD91730064D5A4 /* WebSocketTransportTests */,
+				DA674BCD19AD91730064D5A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA674BCD19AD91730064D5A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */,
+				DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA674BCE19AD91730064D5A4 /* WebSocketTransport */ = {
+			isa = PBXGroup;
+			children = (
+				DA674BD119AD91730064D5A4 /* WebSocketTransport.h */,
+				DA674BCF19AD91730064D5A4 /* Supporting Files */,
+			);
+			path = WebSocketTransport;
+			sourceTree = "<group>";
+		};
+		DA674BCF19AD91730064D5A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA674BD019AD91730064D5A4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA674BD819AD91730064D5A4 /* WebSocketTransportTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA674BDB19AD91730064D5A4 /* WebSocketTransportTests.swift */,
+				DA674BD919AD91730064D5A4 /* Supporting Files */,
+			);
+			path = WebSocketTransportTests;
+			sourceTree = "<group>";
+		};
+		DA674BD919AD91730064D5A4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA674BDA19AD91730064D5A4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DA674BC919AD91730064D5A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA674BD219AD91730064D5A4 /* WebSocketTransport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DA674BCB19AD91730064D5A4 /* WebSocketTransport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport" */;
+			buildPhases = (
+				DA674BC719AD91730064D5A4 /* Sources */,
+				DA674BC819AD91730064D5A4 /* Frameworks */,
+				DA674BC919AD91730064D5A4 /* Headers */,
+				DA674BCA19AD91730064D5A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebSocketTransport;
+			productName = WebSocketTransport;
+			productReference = DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA674BD619AD91730064D5A4 /* WebSocketTransportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransportTests" */;
+			buildPhases = (
+				DA674BD319AD91730064D5A4 /* Sources */,
+				DA674BD419AD91730064D5A4 /* Frameworks */,
+				DA674BD519AD91730064D5A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebSocketTransportTests;
+			productName = WebSocketTransportTests;
+			productReference = DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA674BC319AD91730064D5A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = CocoaFlow;
+				TargetAttributes = {
+					DA674BCB19AD91730064D5A4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DA674BD619AD91730064D5A4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = DA674BC619AD91730064D5A4 /* Build configuration list for PBXProject "WebSocketTransport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA674BC219AD91730064D5A4;
+			productRefGroup = DA674BCD19AD91730064D5A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA674BCB19AD91730064D5A4 /* WebSocketTransport */,
+				DA674BD619AD91730064D5A4 /* WebSocketTransportTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA674BCA19AD91730064D5A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA674BD519AD91730064D5A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA674BC719AD91730064D5A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA674BD319AD91730064D5A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA674BDC19AD91730064D5A4 /* WebSocketTransportTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA674BDD19AD91730064D5A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA674BDE19AD91730064D5A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA674BE019AD91730064D5A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = WebSocketTransport/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DA674BE119AD91730064D5A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = WebSocketTransport/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DA674BE319AD91730064D5A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WebSocketTransportTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA674BE419AD91730064D5A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WebSocketTransportTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA674BC619AD91730064D5A4 /* Build configuration list for PBXProject "WebSocketTransport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA674BDD19AD91730064D5A4 /* Debug */,
+				DA674BDE19AD91730064D5A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA674BE019AD91730064D5A4 /* Debug */,
+				DA674BE119AD91730064D5A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA674BE319AD91730064D5A4 /* Debug */,
+				DA674BE419AD91730064D5A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA674BC319AD91730064D5A4 /* Project object */;
+}
