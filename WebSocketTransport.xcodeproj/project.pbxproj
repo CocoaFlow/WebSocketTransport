@@ -104,9 +104,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DA674BCB19AD91730064D5A4 /* WebSocketTransport */ = {
+		DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport" */;
+			buildConfigurationList = DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-Mac" */;
 			buildPhases = (
 				DA674BC719AD91730064D5A4 /* Sources */,
 				DA674BC819AD91730064D5A4 /* Frameworks */,
@@ -117,14 +117,14 @@
 			);
 			dependencies = (
 			);
-			name = WebSocketTransport;
+			name = "WebSocketTransport-Mac";
 			productName = WebSocketTransport;
 			productReference = DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DA674BD619AD91730064D5A4 /* WebSocketTransportTests */ = {
+		DA674BD619AD91730064D5A4 /* WebSocketTransport-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransportTests" */;
+			buildConfigurationList = DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-MacTests" */;
 			buildPhases = (
 				DA674BD319AD91730064D5A4 /* Sources */,
 				DA674BD419AD91730064D5A4 /* Frameworks */,
@@ -134,7 +134,7 @@
 			);
 			dependencies = (
 			);
-			name = WebSocketTransportTests;
+			name = "WebSocketTransport-MacTests";
 			productName = WebSocketTransportTests;
 			productReference = DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -168,8 +168,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA674BCB19AD91730064D5A4 /* WebSocketTransport */,
-				DA674BD619AD91730064D5A4 /* WebSocketTransportTests */,
+				DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */,
+				DA674BD619AD91730064D5A4 /* WebSocketTransport-MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 				INFOPLIST_FILE = WebSocketTransport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WebSocketTransport;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -320,7 +320,7 @@
 				INFOPLIST_FILE = WebSocketTransport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WebSocketTransport;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -369,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport" */ = {
+		DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA674BE019AD91730064D5A4 /* Debug */,
@@ -377,7 +377,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransportTests" */ = {
+		DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA674BE319AD91730064D5A4 /* Debug */,
