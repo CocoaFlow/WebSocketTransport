@@ -9,7 +9,39 @@
 /* Begin PBXBuildFile section */
 		DA674BD219AD91730064D5A4 /* WebSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = DA674BD119AD91730064D5A4 /* WebSocketTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA674BDC19AD91730064D5A4 /* WebSocketTransportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674BDB19AD91730064D5A4 /* WebSocketTransportTests.swift */; };
+		DA674BF519AD94240064D5A4 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA674BEE19AD93DD0064D5A4 /* Transport.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA674BED19AD93DD0064D5A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DADA67B019AD7F240062316A;
+			remoteInfo = "Transport-Mac";
+		};
+		DA674BEF19AD93DD0064D5A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DADA67BB19AD7F240062316A;
+			remoteInfo = "Transport-MacTests";
+		};
+		DA674BF119AD93DD0064D5A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DADA67CE19AD83150062316A;
+			remoteInfo = "Transport-iOS";
+		};
+		DA674BF319AD93DD0064D5A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DADA67D819AD83150062316A;
+			remoteInfo = "Transport-iOSTests";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +50,7 @@
 		DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketTransportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA674BDA19AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA674BDB19AD91730064D5A4 /* WebSocketTransportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTransportTests.swift; sourceTree = "<group>"; };
+		DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Transport.xcodeproj; path = External/Transport/Transport.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA674BF519AD94240064D5A4 /* Transport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +93,7 @@
 		DA674BCE19AD91730064D5A4 /* WebSocketTransport */ = {
 			isa = PBXGroup;
 			children = (
+				DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */,
 				DA674BD119AD91730064D5A4 /* WebSocketTransport.h */,
 				DA674BCF19AD91730064D5A4 /* Supporting Files */,
 			);
@@ -88,6 +123,17 @@
 				DA674BDA19AD91730064D5A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA674BE619AD93DD0064D5A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA674BEE19AD93DD0064D5A4 /* Transport.framework */,
+				DA674BF019AD93DD0064D5A4 /* Transport-MacTests.xctest */,
+				DA674BF219AD93DD0064D5A4 /* Transport.framework */,
+				DA674BF419AD93DD0064D5A4 /* Transport-iOSTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +212,12 @@
 			mainGroup = DA674BC219AD91730064D5A4;
 			productRefGroup = DA674BCD19AD91730064D5A4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DA674BE619AD93DD0064D5A4 /* Products */;
+					ProjectRef = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */,
@@ -173,6 +225,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DA674BEE19AD93DD0064D5A4 /* Transport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Transport.framework;
+			remoteRef = DA674BED19AD93DD0064D5A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA674BF019AD93DD0064D5A4 /* Transport-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Transport-MacTests.xctest";
+			remoteRef = DA674BEF19AD93DD0064D5A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA674BF219AD93DD0064D5A4 /* Transport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Transport.framework;
+			remoteRef = DA674BF119AD93DD0064D5A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA674BF419AD93DD0064D5A4 /* Transport-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Transport-iOSTests.xctest";
+			remoteRef = DA674BF319AD93DD0064D5A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DA674BCA19AD91730064D5A4 /* Resources */ = {
