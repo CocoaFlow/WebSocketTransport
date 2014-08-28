@@ -99,6 +99,13 @@
 			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
 			remoteInfo = "Nimble-OSXTests";
 		};
+		DA9F196319AEF6F00018BF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA674BC319AD91730064D5A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA674BCB19AD91730064D5A4;
+			remoteInfo = "WebSocketTransport-Mac";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +272,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DA9F196419AEF6F00018BF48 /* PBXTargetDependency */,
 			);
 			name = "WebSocketTransport-MacTests";
 			productName = WebSocketTransportTests;
@@ -441,6 +449,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA9F196419AEF6F00018BF48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */;
+			targetProxy = DA9F196319AEF6F00018BF48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DA674BDD19AD91730064D5A4 /* Debug */ = {
