@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F148E41-7395-4A0A-9E5C-1066D1AB6F2D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WebSocketTransport</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E6D588E82EE0418D596FCECF2796F44FE2B655B</key>
+		<string>github.com:CocoaFlow/Transport.git</string>
+		<key>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</key>
+		<string>github.com:CocoaFlow/WebSocketTransport.git</string>
+		<key>4EC9242325463947345742C074D276FC6778FE31</key>
+		<string>github.com:owensd/json-swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WebSocketTransport.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E6D588E82EE0418D596FCECF2796F44FE2B655B</key>
+		<string>../..External/Transport/</string>
+		<key>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</key>
+		<string>../..</string>
+		<key>4EC9242325463947345742C074D276FC6778FE31</key>
+		<string>../..External/Transport/External/json-swift/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:CocoaFlow/WebSocketTransport.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4EC9242325463947345742C074D276FC6778FE31</string>
+			<key>IDESourceControlWCCName</key>
+			<string>json-swift</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E6D588E82EE0418D596FCECF2796F44FE2B655B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Transport</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WebSocketTransport</string>
+		</dict>
+	</array>
+</dict>
+</plist>
