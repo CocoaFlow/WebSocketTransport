@@ -16,6 +16,10 @@
 		<string>github.com:CocoaFlow/WebSocketTransport.git</string>
 		<key>4EC9242325463947345742C074D276FC6778FE31</key>
 		<string>github.com:owensd/json-swift.git</string>
+		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
+		<string>github.com:Quick/Nimble.git</string>
+		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
+		<string>github.com:Quick/Quick.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WebSocketTransport.xcodeproj</string>
@@ -27,6 +31,10 @@
 		<string>../..</string>
 		<key>4EC9242325463947345742C074D276FC6778FE31</key>
 		<string>../..External/Transport/External/json-swift/</string>
+		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
+		<string>../..External/Nimble/</string>
+		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
+		<string>../..External/Quick/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:CocoaFlow/WebSocketTransport.git</string>
@@ -43,6 +51,22 @@
 			<string>4EC9242325463947345742C074D276FC6778FE31</string>
 			<key>IDESourceControlWCCName</key>
 			<string>json-swift</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>95438028B10BBB846574013D29F154A00556A9D1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Nimble</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Quick</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
