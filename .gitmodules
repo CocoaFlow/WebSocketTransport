@@ -1,3 +1,6 @@
 [submodule "External/Transport"]
 	path = External/Transport
 	url = git@github.com:CocoaFlow/Transport.git
+[submodule "External/Quick"]
+	path = External/Quick
+	url = git@github.com:Quick/Quick.git
