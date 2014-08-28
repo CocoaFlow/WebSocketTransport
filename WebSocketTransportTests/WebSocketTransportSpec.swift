@@ -45,6 +45,13 @@ class WebSocketTransportSpec: QuickSpec {
                     expect(runtimePayload).to(equal(json))
                 }
             }
+            
+            describe("when sent a message by the runtime") {
+                
+                pending("should send a message") {
+                    
+                }
+            }
         }
     }
 }
