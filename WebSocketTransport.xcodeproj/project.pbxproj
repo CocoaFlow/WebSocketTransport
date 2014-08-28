@@ -47,7 +47,7 @@
 		DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA674BD019AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA674BD119AD91730064D5A4 /* WebSocketTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketTransport.h; sourceTree = "<group>"; };
-		DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketTransportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA674BD719AD91730064D5A4 /* WebSocketTransport-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WebSocketTransport-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA674BDA19AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA674BDB19AD91730064D5A4 /* WebSocketTransportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketTransportTests.swift; sourceTree = "<group>"; };
 		DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Transport.xcodeproj; path = External/Transport/Transport.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */,
-				DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */,
+				DA674BD719AD91730064D5A4 /* WebSocketTransport-MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			);
 			name = "WebSocketTransport-MacTests";
 			productName = WebSocketTransportTests;
-			productReference = DA674BD719AD91730064D5A4 /* WebSocketTransportTests.xctest */;
+			productReference = DA674BD719AD91730064D5A4 /* WebSocketTransport-MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -471,6 +471,7 @@
 				DA674BE119AD91730064D5A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA674BE219AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +480,7 @@
 				DA674BE419AD91730064D5A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
