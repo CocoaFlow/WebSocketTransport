@@ -26,15 +26,15 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0E6D588E82EE0418D596FCECF2796F44FE2B655B</key>
-		<string>../..External/Transport/</string>
+		<string>../..External/Transport</string>
 		<key>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</key>
 		<string>../..</string>
 		<key>4EC9242325463947345742C074D276FC6778FE31</key>
-		<string>../..External/Transport/External/json-swift/</string>
+		<string>../..External/Transport/External/json-swift</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
-		<string>../..External/Nimble/</string>
+		<string>../..External/Nimble</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
-		<string>../..External/Quick/</string>
+		<string>../..External/Quick</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:CocoaFlow/WebSocketTransport.git</string>
