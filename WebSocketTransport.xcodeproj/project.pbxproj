@@ -39,6 +39,7 @@
 		DAE885EC19B1A0F000D65A8B /* server-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D319B1A0F000D65A8B /* server-handshake.c */; };
 		DAE885ED19B1A0F000D65A8B /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D419B1A0F000D65A8B /* server.c */; };
 		DAE885EE19B1A0F000D65A8B /* sha-1.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D519B1A0F000D65A8B /* sha-1.c */; };
+		DAE885FC19B1A15C00D65A8B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE885FB19B1A15C00D65A8B /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,7 @@
 		DAE885D319B1A0F000D65A8B /* server-handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "server-handshake.c"; sourceTree = "<group>"; };
 		DAE885D419B1A0F000D65A8B /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
 		DAE885D519B1A0F000D65A8B /* sha-1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sha-1.c"; sourceTree = "<group>"; };
+		DAE885FB19B1A15C00D65A8B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE885FC19B1A15C00D65A8B /* libz.dylib in Frameworks */,
 				DA674BF519AD94240064D5A4 /* Transport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +201,7 @@
 		DA674BC219AD91730064D5A4 = {
 			isa = PBXGroup;
 			children = (
+				DAE885FB19B1A15C00D65A8B /* libz.dylib */,
 				DA674BCE19AD91730064D5A4 /* WebSocketTransport */,
 				DA674BD819AD91730064D5A4 /* WebSocketTransportTests */,
 				DA674BCD19AD91730064D5A4 /* Products */,
