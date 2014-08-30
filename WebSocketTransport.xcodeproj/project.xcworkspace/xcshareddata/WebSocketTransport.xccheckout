@@ -14,6 +14,8 @@
 		<string>github.com:CocoaFlow/Transport.git</string>
 		<key>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</key>
 		<string>github.com:CocoaFlow/WebSocketTransport.git</string>
+		<key>27AF357F37962B912729679B7FE1DC7B7A29EF1A</key>
+		<string>github.com:benlodotcom/BLWebSocketsServer.git</string>
 		<key>4EC9242325463947345742C074D276FC6778FE31</key>
 		<string>github.com:owensd/json-swift.git</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
@@ -29,6 +31,8 @@
 		<string>../..External/Transport</string>
 		<key>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</key>
 		<string>../..</string>
+		<key>27AF357F37962B912729679B7FE1DC7B7A29EF1A</key>
+		<string>../../External/BLWebSocketsServer/</string>
 		<key>4EC9242325463947345742C074D276FC6778FE31</key>
 		<string>../..External/Transport/External/json-swift</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
@@ -44,6 +48,14 @@
 	<string>174F6E19AD4B293E1EB4B97C34D9EA318E55E794</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>27AF357F37962B912729679B7FE1DC7B7A29EF1A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BLWebSocketsServer</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
