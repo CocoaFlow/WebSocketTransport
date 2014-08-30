@@ -10,6 +10,8 @@ import Transport
 import JSONLib
 
 public struct WebSocketTransport: Transport {
+    
+    private let webSocketServer = BLWebSocketsServer.sharedInstance()
 
     public init() {}
     
