@@ -15,7 +15,7 @@
 		DA74D27819AEF3BB00E268AF /* WebSocketTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */; };
 		DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27919AEF44900E268AF /* FakeRuntime.swift */; };
 		DAE885D619B1A0F000D65A8B /* BLWebSocketsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */; };
-		DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; };
+		DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DAE885D819B1A0F000D65A8B /* base64-decode.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BF19B1A0F000D65A8B /* base64-decode.c */; };
 		DAE885D919B1A0F000D65A8B /* BLAsyncMessageQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C019B1A0F000D65A8B /* BLAsyncMessageQueue.h */; };
 		DAE885DA19B1A0F000D65A8B /* BLAsyncMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C119B1A0F000D65A8B /* BLAsyncMessageQueue.m */; };
