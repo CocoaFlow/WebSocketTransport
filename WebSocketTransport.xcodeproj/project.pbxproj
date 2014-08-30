@@ -14,6 +14,31 @@
 		DA74D26A19AEE6A500E268AF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D26619AEE68400E268AF /* Nimble.framework */; };
 		DA74D27819AEF3BB00E268AF /* WebSocketTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */; };
 		DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27919AEF44900E268AF /* FakeRuntime.swift */; };
+		DAE885D619B1A0F000D65A8B /* BLWebSocketsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */; };
+		DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; };
+		DAE885D819B1A0F000D65A8B /* base64-decode.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BF19B1A0F000D65A8B /* base64-decode.c */; };
+		DAE885D919B1A0F000D65A8B /* BLAsyncMessageQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C019B1A0F000D65A8B /* BLAsyncMessageQueue.h */; };
+		DAE885DA19B1A0F000D65A8B /* BLAsyncMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C119B1A0F000D65A8B /* BLAsyncMessageQueue.m */; };
+		DAE885DB19B1A0F000D65A8B /* client-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C219B1A0F000D65A8B /* client-handshake.c */; };
+		DAE885DC19B1A0F000D65A8B /* client-parser.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C319B1A0F000D65A8B /* client-parser.c */; };
+		DAE885DD19B1A0F000D65A8B /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C419B1A0F000D65A8B /* client.c */; };
+		DAE885DE19B1A0F000D65A8B /* daemonize.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C519B1A0F000D65A8B /* daemonize.c */; };
+		DAE885DF19B1A0F000D65A8B /* extension-deflate-frame.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C619B1A0F000D65A8B /* extension-deflate-frame.c */; };
+		DAE885E019B1A0F000D65A8B /* extension-deflate-frame.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C719B1A0F000D65A8B /* extension-deflate-frame.h */; };
+		DAE885E119B1A0F000D65A8B /* extension-deflate-stream.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C819B1A0F000D65A8B /* extension-deflate-stream.c */; };
+		DAE885E219B1A0F000D65A8B /* extension-deflate-stream.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C919B1A0F000D65A8B /* extension-deflate-stream.h */; };
+		DAE885E319B1A0F000D65A8B /* extension.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CA19B1A0F000D65A8B /* extension.c */; };
+		DAE885E419B1A0F000D65A8B /* getifaddrs.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CB19B1A0F000D65A8B /* getifaddrs.c */; };
+		DAE885E519B1A0F000D65A8B /* getifaddrs.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885CC19B1A0F000D65A8B /* getifaddrs.h */; };
+		DAE885E619B1A0F000D65A8B /* handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CD19B1A0F000D65A8B /* handshake.c */; };
+		DAE885E719B1A0F000D65A8B /* libwebsockets.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CE19B1A0F000D65A8B /* libwebsockets.c */; };
+		DAE885E819B1A0F000D65A8B /* libwebsockets.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885CF19B1A0F000D65A8B /* libwebsockets.h */; };
+		DAE885E919B1A0F000D65A8B /* output.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D019B1A0F000D65A8B /* output.c */; };
+		DAE885EA19B1A0F000D65A8B /* parsers.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D119B1A0F000D65A8B /* parsers.c */; };
+		DAE885EB19B1A0F000D65A8B /* private-libwebsockets.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885D219B1A0F000D65A8B /* private-libwebsockets.h */; };
+		DAE885EC19B1A0F000D65A8B /* server-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D319B1A0F000D65A8B /* server-handshake.c */; };
+		DAE885ED19B1A0F000D65A8B /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D419B1A0F000D65A8B /* server.c */; };
+		DAE885EE19B1A0F000D65A8B /* sha-1.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D519B1A0F000D65A8B /* sha-1.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +147,31 @@
 		DA74D25A19AEE68300E268AF /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketTransport.swift; sourceTree = "<group>"; };
 		DA74D27919AEF44900E268AF /* FakeRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRuntime.swift; sourceTree = "<group>"; };
+		DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLWebSocketsServer.h; sourceTree = "<group>"; };
+		DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLWebSocketsServer.m; sourceTree = "<group>"; };
+		DAE885BF19B1A0F000D65A8B /* base64-decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "base64-decode.c"; sourceTree = "<group>"; };
+		DAE885C019B1A0F000D65A8B /* BLAsyncMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAsyncMessageQueue.h; sourceTree = "<group>"; };
+		DAE885C119B1A0F000D65A8B /* BLAsyncMessageQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAsyncMessageQueue.m; sourceTree = "<group>"; };
+		DAE885C219B1A0F000D65A8B /* client-handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "client-handshake.c"; sourceTree = "<group>"; };
+		DAE885C319B1A0F000D65A8B /* client-parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "client-parser.c"; sourceTree = "<group>"; };
+		DAE885C419B1A0F000D65A8B /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		DAE885C519B1A0F000D65A8B /* daemonize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = daemonize.c; sourceTree = "<group>"; };
+		DAE885C619B1A0F000D65A8B /* extension-deflate-frame.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "extension-deflate-frame.c"; sourceTree = "<group>"; };
+		DAE885C719B1A0F000D65A8B /* extension-deflate-frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "extension-deflate-frame.h"; sourceTree = "<group>"; };
+		DAE885C819B1A0F000D65A8B /* extension-deflate-stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "extension-deflate-stream.c"; sourceTree = "<group>"; };
+		DAE885C919B1A0F000D65A8B /* extension-deflate-stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "extension-deflate-stream.h"; sourceTree = "<group>"; };
+		DAE885CA19B1A0F000D65A8B /* extension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = extension.c; sourceTree = "<group>"; };
+		DAE885CB19B1A0F000D65A8B /* getifaddrs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getifaddrs.c; sourceTree = "<group>"; };
+		DAE885CC19B1A0F000D65A8B /* getifaddrs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getifaddrs.h; sourceTree = "<group>"; };
+		DAE885CD19B1A0F000D65A8B /* handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = handshake.c; sourceTree = "<group>"; };
+		DAE885CE19B1A0F000D65A8B /* libwebsockets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libwebsockets.c; sourceTree = "<group>"; };
+		DAE885CF19B1A0F000D65A8B /* libwebsockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libwebsockets.h; sourceTree = "<group>"; };
+		DAE885D019B1A0F000D65A8B /* output.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = output.c; sourceTree = "<group>"; };
+		DAE885D119B1A0F000D65A8B /* parsers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parsers.c; sourceTree = "<group>"; };
+		DAE885D219B1A0F000D65A8B /* private-libwebsockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "private-libwebsockets.h"; sourceTree = "<group>"; };
+		DAE885D319B1A0F000D65A8B /* server-handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "server-handshake.c"; sourceTree = "<group>"; };
+		DAE885D419B1A0F000D65A8B /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
+		DAE885D519B1A0F000D65A8B /* sha-1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sha-1.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +216,7 @@
 		DA674BCE19AD91730064D5A4 /* WebSocketTransport */ = {
 			isa = PBXGroup;
 			children = (
+				DAE885BB19B1A0F000D65A8B /* BLWebSocketsServer */,
 				DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */,
 				DA674BD119AD91730064D5A4 /* WebSocketTransport.h */,
 				DA674BCF19AD91730064D5A4 /* Supporting Files */,
@@ -235,6 +286,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DAE885BB19B1A0F000D65A8B /* BLWebSocketsServer */ = {
+			isa = PBXGroup;
+			children = (
+				DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */,
+				DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */,
+				DAE885BE19B1A0F000D65A8B /* libwebsockets */,
+			);
+			name = BLWebSocketsServer;
+			path = External/BLWebSocketsServer/BLWebSocketsServer;
+			sourceTree = SOURCE_ROOT;
+		};
+		DAE885BE19B1A0F000D65A8B /* libwebsockets */ = {
+			isa = PBXGroup;
+			children = (
+				DAE885BF19B1A0F000D65A8B /* base64-decode.c */,
+				DAE885C019B1A0F000D65A8B /* BLAsyncMessageQueue.h */,
+				DAE885C119B1A0F000D65A8B /* BLAsyncMessageQueue.m */,
+				DAE885C219B1A0F000D65A8B /* client-handshake.c */,
+				DAE885C319B1A0F000D65A8B /* client-parser.c */,
+				DAE885C419B1A0F000D65A8B /* client.c */,
+				DAE885C519B1A0F000D65A8B /* daemonize.c */,
+				DAE885C619B1A0F000D65A8B /* extension-deflate-frame.c */,
+				DAE885C719B1A0F000D65A8B /* extension-deflate-frame.h */,
+				DAE885C819B1A0F000D65A8B /* extension-deflate-stream.c */,
+				DAE885C919B1A0F000D65A8B /* extension-deflate-stream.h */,
+				DAE885CA19B1A0F000D65A8B /* extension.c */,
+				DAE885CB19B1A0F000D65A8B /* getifaddrs.c */,
+				DAE885CC19B1A0F000D65A8B /* getifaddrs.h */,
+				DAE885CD19B1A0F000D65A8B /* handshake.c */,
+				DAE885CE19B1A0F000D65A8B /* libwebsockets.c */,
+				DAE885CF19B1A0F000D65A8B /* libwebsockets.h */,
+				DAE885D019B1A0F000D65A8B /* output.c */,
+				DAE885D119B1A0F000D65A8B /* parsers.c */,
+				DAE885D219B1A0F000D65A8B /* private-libwebsockets.h */,
+				DAE885D319B1A0F000D65A8B /* server-handshake.c */,
+				DAE885D419B1A0F000D65A8B /* server.c */,
+				DAE885D519B1A0F000D65A8B /* sha-1.c */,
+			);
+			path = libwebsockets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -243,6 +335,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA674BD219AD91730064D5A4 /* WebSocketTransport.h in Headers */,
+				DAE885E219B1A0F000D65A8B /* extension-deflate-stream.h in Headers */,
+				DAE885D619B1A0F000D65A8B /* BLWebSocketsServer.h in Headers */,
+				DAE885E019B1A0F000D65A8B /* extension-deflate-frame.h in Headers */,
+				DAE885D919B1A0F000D65A8B /* BLAsyncMessageQueue.h in Headers */,
+				DAE885E519B1A0F000D65A8B /* getifaddrs.h in Headers */,
+				DAE885EB19B1A0F000D65A8B /* private-libwebsockets.h in Headers */,
+				DAE885E819B1A0F000D65A8B /* libwebsockets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +542,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE885EC19B1A0F000D65A8B /* server-handshake.c in Sources */,
+				DAE885E919B1A0F000D65A8B /* output.c in Sources */,
+				DAE885DF19B1A0F000D65A8B /* extension-deflate-frame.c in Sources */,
+				DAE885E119B1A0F000D65A8B /* extension-deflate-stream.c in Sources */,
+				DAE885ED19B1A0F000D65A8B /* server.c in Sources */,
+				DAE885DE19B1A0F000D65A8B /* daemonize.c in Sources */,
+				DAE885E719B1A0F000D65A8B /* libwebsockets.c in Sources */,
+				DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */,
+				DAE885DD19B1A0F000D65A8B /* client.c in Sources */,
+				DAE885D819B1A0F000D65A8B /* base64-decode.c in Sources */,
+				DAE885EE19B1A0F000D65A8B /* sha-1.c in Sources */,
+				DAE885DA19B1A0F000D65A8B /* BLAsyncMessageQueue.m in Sources */,
 				DA74D27819AEF3BB00E268AF /* WebSocketTransport.swift in Sources */,
+				DAE885EA19B1A0F000D65A8B /* parsers.c in Sources */,
+				DAE885DB19B1A0F000D65A8B /* client-handshake.c in Sources */,
+				DAE885E319B1A0F000D65A8B /* extension.c in Sources */,
+				DAE885E619B1A0F000D65A8B /* handshake.c in Sources */,
+				DAE885E419B1A0F000D65A8B /* getifaddrs.c in Sources */,
+				DAE885DC19B1A0F000D65A8B /* client-parser.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
