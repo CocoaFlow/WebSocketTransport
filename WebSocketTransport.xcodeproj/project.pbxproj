@@ -13,6 +13,7 @@
 		DA74D26919AEE6A100E268AF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D25319AEE66400E268AF /* Quick.framework */; };
 		DA74D26A19AEE6A500E268AF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D26619AEE68400E268AF /* Nimble.framework */; };
 		DA74D27819AEF3BB00E268AF /* WebSocketTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */; };
+		DA87A2B019B4195200FE5F58 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87A2A719B4193500FE5F58 /* SocketRocket.framework */; };
 		DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27919AEF44900E268AF /* FakeRuntime.swift */; };
 		DAE885D619B1A0F000D65A8B /* BLWebSocketsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -127,6 +128,34 @@
 			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
 			remoteInfo = "Nimble-OSXTests";
 		};
+		DA87A2A419B4193500FE5F58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6B2082D1450F597009315AF;
+			remoteInfo = SocketRocket;
+		};
+		DA87A2A619B4193500FE5F58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F668C880153E91210044DBAC;
+			remoteInfo = SocketRocketOSX;
+		};
+		DA87A2A819B4193500FE5F58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6BDA802145900D200FE3253;
+			remoteInfo = SRWebSocketTests;
+		};
+		DA87A2AA19B4193500FE5F58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F62417E314D52F3C003CE997;
+			remoteInfo = TestChat;
+		};
 		DA9F196319AEF6F00018BF48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DA674BC319AD91730064D5A4 /* Project object */;
@@ -148,6 +177,7 @@
 		DA74D25A19AEE68300E268AF /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketTransport.swift; sourceTree = "<group>"; };
 		DA74D27919AEF44900E268AF /* FakeRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRuntime.swift; sourceTree = "<group>"; };
+		DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketRocket.xcodeproj; path = External/SocketRocket/SocketRocket.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLWebSocketsServer.h; sourceTree = "<group>"; };
 		DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLWebSocketsServer.m; sourceTree = "<group>"; };
 		DAE885BF19B1A0F000D65A8B /* base64-decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "base64-decode.c"; sourceTree = "<group>"; };
@@ -190,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA87A2B019B4195200FE5F58 /* SocketRocket.framework in Frameworks */,
 				DA74D26A19AEE6A500E268AF /* Nimble.framework in Frameworks */,
 				DA74D26919AEE6A100E268AF /* Quick.framework in Frameworks */,
 			);
@@ -240,6 +271,7 @@
 		DA674BD819AD91730064D5A4 /* WebSocketTransportTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */,
 				DA74D25A19AEE68300E268AF /* Nimble.xcodeproj */,
 				DA74D24A19AEE66300E268AF /* Quick.xcodeproj */,
 				DA674BDB19AD91730064D5A4 /* WebSocketTransportSpec.swift */,
@@ -286,6 +318,17 @@
 				DA74D26419AEE68400E268AF /* NimbleTests.xctest */,
 				DA74D26619AEE68400E268AF /* Nimble.framework */,
 				DA74D26819AEE68400E268AF /* Nimble-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA87A29619B4193500FE5F58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA87A2A519B4193500FE5F58 /* libSocketRocket.a */,
+				DA87A2A719B4193500FE5F58 /* SocketRocket.framework */,
+				DA87A2A919B4193500FE5F58 /* SRWebSocketTests.octest */,
+				DA87A2AB19B4193500FE5F58 /* TestChat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,6 +468,10 @@
 					ProjectRef = DA74D24A19AEE66300E268AF /* Quick.xcodeproj */;
 				},
 				{
+					ProductGroup = DA87A29619B4193500FE5F58 /* Products */;
+					ProjectRef = DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */;
+				},
+				{
 					ProductGroup = DA674BE619AD93DD0064D5A4 /* Products */;
 					ProjectRef = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
 				},
@@ -520,6 +567,34 @@
 			fileType = wrapper.cfbundle;
 			path = "Nimble-OSXTests.xctest";
 			remoteRef = DA74D26719AEE68400E268AF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA87A2A519B4193500FE5F58 /* libSocketRocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSocketRocket.a;
+			remoteRef = DA87A2A419B4193500FE5F58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA87A2A719B4193500FE5F58 /* SocketRocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SocketRocket.framework;
+			remoteRef = DA87A2A619B4193500FE5F58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA87A2A919B4193500FE5F58 /* SRWebSocketTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SRWebSocketTests.octest;
+			remoteRef = DA87A2A819B4193500FE5F58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DA87A2AB19B4193500FE5F58 /* TestChat.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestChat.app;
+			remoteRef = DA87A2AA19B4193500FE5F58 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
