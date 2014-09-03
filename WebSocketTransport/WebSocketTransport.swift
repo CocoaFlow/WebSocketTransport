@@ -7,14 +7,17 @@
 //
 
 import Transport
+import MessageTransfer
 import JSONLib
 
 public struct WebSocketTransport: Transport {
     
     private let webSocketServer = BLWebSocketsServer.sharedInstance()
+    public var messageReceiver: MessageReceiver?
     
     // TODO: Make port option in protocol
     public init() {
+    public init(var _ messageReceiver: MessageReceiverWorkaround) {
         self.webSocketServer.setHandleRequestBlock { (data) -> NSData! in
             let jsonString = NSString(data: data, encoding: UInt())
 
