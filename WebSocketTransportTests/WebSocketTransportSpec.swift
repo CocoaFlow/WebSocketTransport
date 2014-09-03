@@ -24,7 +24,8 @@ class WebSocketTransportSpec: QuickSpec {
                     
                     let transportChannel = "channel"
                     let transportTopic = "topic"
-                    let transportPayload = "{\"protocol\":\"channel\",\"command\":\"topic\",\"payload\":{\"key\":\"value\"}}"
+                    let transportPayload = "{\"key\":\"value\"}"
+                    let transportData = "{\"protocol\":\"\(transportChannel)\",\"command\":\"\(transportTopic)\",\"payload\":\(transportPayload)}"
                     
                     var runtimeChannel: String!
                     var runtimeTopic: String!
