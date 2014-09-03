@@ -17,6 +17,21 @@ class WebSocketTransportSpec: QuickSpec {
         
         describe("WebSocket transport") {
             
+            describe("creating an instance") {
+                
+                it("should set the message receiver") {
+                    let fakeMessageReceiver = FakeMessageReceiver()
+                    let transport = WebSocketTransport(fakeMessageReceiver)
+                    expect(transport.messageReceiver).to(beIdenticalTo(fakeMessageReceiver))
+                }
+                
+                it("should set itself as the message sender") {
+                    let fakeMessageReceiver = FakeMessageReceiver()
+                    let transport = WebSocketTransport(fakeMessageReceiver)
+                    expect(fakeMessageReceiver.messageSender).to(beIdenticalTo(transport))
+                }
+            }
+            
             describe("receiving a message") {
             
                 it("should receive a message in the runtime") {
