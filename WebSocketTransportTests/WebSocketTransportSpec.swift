@@ -35,30 +35,30 @@ class WebSocketTransportSpec: QuickSpec {
             describe("receiving a message") {
             
                 it("should receive a message in the runtime") {
-                    let transport = WebSocketTransport()
-                    
                     let transportChannel = "channel"
                     let transportTopic = "topic"
                     let transportPayload = "{\"key\":\"value\"}"
                     let transportData = "{\"protocol\":\"\(transportChannel)\",\"command\":\"\(transportTopic)\",\"payload\":\(transportPayload)}"
                     
-                    var runtimeChannel: String!
-                    var runtimeTopic: String!
-                    var runtimePayload: JSON!
+                    var receiverChannel: String!
+                    var receiverTopic: String!
+                    var receiverPayload: JSON!
                     
-                    let runtime = FakeRuntime(transport) { (channel, topic, payload) in
-                        runtimeChannel = channel
-                        runtimeTopic = topic
-                        runtimePayload = payload
+                    let fakeMessageReceiver = FakeMessageReceiver() { (channel, topic, payload) in
+                        receiverChannel = channel
+                        receiverTopic = topic
+                        receiverPayload = payload
                     }
+
+                    let transport = WebSocketTransport(fakeMessageReceiver)
                     
                     let fakeWebSocketClient = FakeWebSocketClient { webSocket in
                         webSocket.send(transportData)
                     }
                     
-                    expect(runtimeChannel).toEventually(equal(transportChannel))
-                    expect(runtimeTopic).toEventually(equal(transportTopic))
-                    expect(runtimePayload).toEventually(equal(JSON.parse(transportPayload).value))
+                    expect(receiverChannel).toEventually(equal(transportChannel))
+                    expect(receiverTopic).toEventually(equal(transportTopic))
+                    expect(receiverPayload).toEventually(equal(JSON.parse(transportPayload).value))
                 }
             }
             
