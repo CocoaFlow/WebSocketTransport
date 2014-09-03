@@ -12,10 +12,42 @@ import JSONLib
 public struct WebSocketTransport: Transport {
     
     private let webSocketServer = BLWebSocketsServer.sharedInstance()
+    
+    // TODO: Make port option in protocol
+    public init() {
+        self.webSocketServer.setHandleRequestBlock { (data) -> NSData! in
+            let jsonString = NSString(data: data, encoding: UInt())
 
-    public init() {}
+            if let json = JSON.parse(jsonString).value {
+                let channel = json["protocol"].string
+                let topic = json["command"].string
+                let jsonPayload: JSON = json["payload"]
+                let payload = jsonPayload.object
+                
+                switch (channel, topic, payload) {
+                case let (.Some(channel), .Some(topic), .Some(payload)):
+                    println(channel)
+                    println(topic)
+                    println(jsonPayload)
+                default:
+                    break
+                }
+            }
+            
+            // FIXME - transport has no knowledge of the runtime so can't call runtime.receive()
+            
+            // TODO: Determine if returning nil is valid - "Attempt to write empty data on the websocket"
+            return nil
+        }
+        
+        self.webSocketServer.startListeningOnPort(3569, withProtocolName: nil) { (error) in
+            if (error != nil) {
+                println(error)
+            }
+        }
+    }
     
     public func send(channel: String, _ topic: String, _ payload: JSON) {
-        // FIXME
+        // TODO
     }
 }
