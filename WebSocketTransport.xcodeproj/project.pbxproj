@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1B71AE19B6A2F300933BAF /* FakeWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */; };
 		DA674BD219AD91730064D5A4 /* WebSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = DA674BD119AD91730064D5A4 /* WebSocketTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA674BDC19AD91730064D5A4 /* WebSocketTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674BDB19AD91730064D5A4 /* WebSocketTransportSpec.swift */; };
 		DA674BF519AD94240064D5A4 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA674BEE19AD93DD0064D5A4 /* Transport.framework */; };
@@ -167,6 +168,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeWebSocketClient.swift; sourceTree = "<group>"; };
 		DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA674BD019AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA674BD119AD91730064D5A4 /* WebSocketTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketTransport.h; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				DA674BD919AD91730064D5A4 /* Supporting Files */,
 				DA74D27919AEF44900E268AF /* FakeRuntime.swift */,
 				DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */,
+				DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */,
 			);
 			path = WebSocketTransportTests;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 			files = (
 				DA674BDC19AD91730064D5A4 /* WebSocketTransportSpec.swift in Sources */,
 				DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */,
+				DA1B71AE19B6A2F300933BAF /* FakeWebSocketClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
