@@ -43,6 +43,7 @@
 		DAE885ED19B1A0F000D65A8B /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D419B1A0F000D65A8B /* server.c */; };
 		DAE885EE19B1A0F000D65A8B /* sha-1.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D519B1A0F000D65A8B /* sha-1.c */; };
 		DAE885FC19B1A15C00D65A8B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE885FB19B1A15C00D65A8B /* libz.dylib */; };
+		DAEA777B19B6E3C6002D650F /* FakeMessageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA777A19B6E3C6002D650F /* FakeMessageReceiver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +209,7 @@
 		DAE885D419B1A0F000D65A8B /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
 		DAE885D519B1A0F000D65A8B /* sha-1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sha-1.c"; sourceTree = "<group>"; };
 		DAE885FB19B1A15C00D65A8B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DAEA777A19B6E3C6002D650F /* FakeMessageReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMessageReceiver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 				DA74D27919AEF44900E268AF /* FakeRuntime.swift */,
 				DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */,
 				DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */,
+				DAEA777A19B6E3C6002D650F /* FakeMessageReceiver.swift */,
 			);
 			path = WebSocketTransportTests;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA674BDC19AD91730064D5A4 /* WebSocketTransportSpec.swift in Sources */,
+				DAEA777B19B6E3C6002D650F /* FakeMessageReceiver.swift in Sources */,
 				DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */,
 				DA1B71AE19B6A2F300933BAF /* FakeWebSocketClient.swift in Sources */,
 			);
