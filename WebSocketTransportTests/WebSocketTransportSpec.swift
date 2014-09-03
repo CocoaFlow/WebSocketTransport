@@ -37,14 +37,13 @@ class WebSocketTransportSpec: QuickSpec {
                         runtimePayload = payload
                     }
                     
-                    expect(runtimeChannel).to(equal(transportChannel))
-                    expect(runtimeTopic).to(equal(transportTopic))
                     let fakeWebSocketClient = FakeWebSocketClient { webSocket in
                         webSocket.send(transportData)
                     }
                     
-                    let json = JSON.parse(transportPayload).value
-                    expect(runtimePayload).to(equal(json))
+                    expect(runtimeChannel).toEventually(equal(transportChannel))
+                    expect(runtimeTopic).toEventually(equal(transportTopic))
+                    expect(runtimePayload).toEventually(equal(JSON.parse(transportPayload).value))
                 }
             }
             
