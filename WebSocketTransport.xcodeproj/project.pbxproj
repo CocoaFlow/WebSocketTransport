@@ -16,7 +16,6 @@
 		DA74D27819AEF3BB00E268AF /* WebSocketTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */; };
 		DA87A2B019B4195200FE5F58 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87A2A719B4193500FE5F58 /* SocketRocket.framework */; };
 		DA87A2B519B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27919AEF44900E268AF /* FakeRuntime.swift */; };
 		DAE885D619B1A0F000D65A8B /* BLWebSocketsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DAE885D819B1A0F000D65A8B /* base64-decode.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BF19B1A0F000D65A8B /* base64-decode.c */; };
@@ -180,7 +179,6 @@
 		DA74D24A19AEE66300E268AF /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA74D25A19AEE68300E268AF /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketTransport.swift; sourceTree = "<group>"; };
-		DA74D27919AEF44900E268AF /* FakeRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRuntime.swift; sourceTree = "<group>"; };
 		DA87A29519B4193500FE5F58 /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketRocket.xcodeproj; path = External/SocketRocket/SocketRocket.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebSocketTransportTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLWebSocketsServer.h; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 				DA74D24A19AEE66300E268AF /* Quick.xcodeproj */,
 				DA674BDB19AD91730064D5A4 /* WebSocketTransportSpec.swift */,
 				DA674BD919AD91730064D5A4 /* Supporting Files */,
-				DA74D27919AEF44900E268AF /* FakeRuntime.swift */,
 				DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */,
 				DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */,
 				DAEA777A19B6E3C6002D650F /* FakeMessageReceiver.swift */,
@@ -667,7 +664,6 @@
 			files = (
 				DA674BDC19AD91730064D5A4 /* WebSocketTransportSpec.swift in Sources */,
 				DAEA777B19B6E3C6002D650F /* FakeMessageReceiver.swift in Sources */,
-				DA8ABBF319AEF7A1004F6BA2 /* FakeRuntime.swift in Sources */,
 				DA1B71AE19B6A2F300933BAF /* FakeWebSocketClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
