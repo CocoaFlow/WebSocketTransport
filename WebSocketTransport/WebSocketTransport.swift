@@ -16,28 +16,29 @@ public struct WebSocketTransport: Transport {
     public var messageReceiver: MessageReceiver?
     
     // TODO: Make port option in protocol
-    public init() {
     public init(var _ messageReceiver: MessageReceiverWorkaround) {
+        self.messageReceiver = messageReceiver
+        messageReceiver.messageSender = self
+        
         self.webSocketServer.setHandleRequestBlock { (data) -> NSData! in
-            let jsonString = NSString(data: data, encoding: UInt())
+            
+            if let receiver = self.messageReceiver {
+                let jsonString = NSString(data: data, encoding: UInt())
 
-            if let json = JSON.parse(jsonString).value {
-                let channel = json["protocol"].string
-                let topic = json["command"].string
-                let jsonPayload: JSON = json["payload"]
-                let payload = jsonPayload.object
-                
-                switch (channel, topic, payload) {
-                case let (.Some(channel), .Some(topic), .Some(payload)):
-                    println(channel)
-                    println(topic)
-                    println(jsonPayload)
-                default:
-                    break
+                if let json = JSON.parse(jsonString).value {
+                    let channel = json["protocol"].string
+                    let topic = json["command"].string
+                    let jsonPayload: JSON = json["payload"]
+                    let payload = jsonPayload.object
+                    
+                    switch (channel, topic, payload) {
+                    case let (.Some(channel), .Some(topic), .Some(payload)):
+                        receiver.receive(channel, topic, jsonPayload)
+                    default:
+                        break
+                    }
                 }
             }
-            
-            // FIXME - transport has no knowledge of the runtime so can't call runtime.receive()
             
             // TODO: Determine if returning nil is valid - "Attempt to write empty data on the websocket"
             return nil
