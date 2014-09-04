@@ -34,7 +34,7 @@ class WebSocketTransportSpec: QuickSpec {
             
             describe("receiving a message") {
             
-                it("should receive a message in the runtime") {
+                it("should receive a message in the message receiver") {
                     let transportChannel = "channel"
                     let transportTopic = "topic"
                     let transportPayload = "{\"key\":\"value\"}"
@@ -62,7 +62,7 @@ class WebSocketTransportSpec: QuickSpec {
                 }
             }
             
-            describe("sent a message by the runtime") {
+            describe("sent a message by the message receiver") {
                 
                 pending("should send a message") {
                     
