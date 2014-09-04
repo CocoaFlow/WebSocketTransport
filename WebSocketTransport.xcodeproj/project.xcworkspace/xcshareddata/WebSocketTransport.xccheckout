@@ -20,6 +20,8 @@
 		<string>github.com:owensd/json-swift.git</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
 		<string>github.com:Quick/Nimble.git</string>
+		<key>A23DD660B48D5EAEF2CD0DE44787EA50F09DD13C</key>
+		<string>github.com:CocoaFlow/MessageTransfer.git</string>
 		<key>ABB939127996C66F7E852A780552ADEEF03C6B13</key>
 		<string>github.com:square/SocketRocket.git</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
@@ -39,6 +41,8 @@
 		<string>../..External/Transport/External/json-swift</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
 		<string>../..External/Nimble</string>
+		<key>A23DD660B48D5EAEF2CD0DE44787EA50F09DD13C</key>
+		<string>../../External/Transport/External/MessageTransfer</string>
 		<key>ABB939127996C66F7E852A780552ADEEF03C6B13</key>
 		<string>../../External/SocketRocket</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
@@ -67,6 +71,14 @@
 			<string>4EC9242325463947345742C074D276FC6778FE31</string>
 			<key>IDESourceControlWCCName</key>
 			<string>json-swift</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A23DD660B48D5EAEF2CD0DE44787EA50F09DD13C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MessageTransfer</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
