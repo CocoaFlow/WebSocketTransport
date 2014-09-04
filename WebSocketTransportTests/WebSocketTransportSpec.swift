@@ -52,9 +52,11 @@ class WebSocketTransportSpec: QuickSpec {
 
                     let transport = WebSocketTransport(fakeMessageReceiver)
                     
-                    let fakeWebSocketClient = FakeWebSocketClient { webSocket in
+                    let webSocketDidOpenHandler = { (webSocket: FakeWebSocketClient) in
                         webSocket.send(transportData)
                     }
+                    
+                    let fakeWebSocketClient = FakeWebSocketClient(webSocketDidOpenHandler)
                     
                     expect(receiverChannel).toEventually(equal(transportChannel))
                     expect(receiverTopic).toEventually(equal(transportTopic))
@@ -65,7 +67,15 @@ class WebSocketTransportSpec: QuickSpec {
             describe("sent a message by the message receiver") {
                 
                 pending("should send a message") {
+                    let receiverChannel = "channel"
+                    let receiverTopic = "topic"
+                    let receiverPayload = "{\"key\":\"value\"}"
                     
+                    let fakeMessageReceiver = FakeMessageReceiver()
+                    let transport = WebSocketTransport(fakeMessageReceiver)
+                    
+                    fakeMessageReceiver.messageSender = transport
+                    fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
                 }
             }
         }
