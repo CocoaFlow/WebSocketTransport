@@ -14,6 +14,7 @@
 		DA74D26919AEE6A100E268AF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D25319AEE66400E268AF /* Quick.framework */; };
 		DA74D26A19AEE6A500E268AF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D26619AEE68400E268AF /* Nimble.framework */; };
 		DA74D27819AEF3BB00E268AF /* WebSocketTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */; };
+		DA7C62A319B98C0B001EA406 /* Websocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C62A219B98C0B001EA406 /* Websocket.swift */; };
 		DA87A2B519B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAE885D619B1A0F000D65A8B /* BLWebSocketsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAE885D719B1A0F000D65A8B /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -150,6 +151,7 @@
 		DA74D24A19AEE66300E268AF /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = External/Quick/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA74D25A19AEE68300E268AF /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = External/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketTransport.swift; sourceTree = "<group>"; };
+		DA7C62A219B98C0B001EA406 /* Websocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Websocket.swift; path = External/starscream/Websocket.swift; sourceTree = SOURCE_ROOT; };
 		DA87A2B419B41C6E00FE5F58 /* WebSocketTransportTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebSocketTransportTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLWebSocketsServer.h; sourceTree = "<group>"; };
 		DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLWebSocketsServer.m; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		DA674BD819AD91730064D5A4 /* WebSocketTransportTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA7C62A219B98C0B001EA406 /* Websocket.swift */,
 				DA74D25A19AEE68300E268AF /* Nimble.xcodeproj */,
 				DA74D24A19AEE66300E268AF /* Quick.xcodeproj */,
 				DA674BDB19AD91730064D5A4 /* WebSocketTransportSpec.swift */,
@@ -588,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA674BDC19AD91730064D5A4 /* WebSocketTransportSpec.swift in Sources */,
+				DA7C62A319B98C0B001EA406 /* Websocket.swift in Sources */,
 				DAEA777B19B6E3C6002D650F /* FakeMessageReceiver.swift in Sources */,
 				DA1B71AE19B6A2F300933BAF /* FakeWebSocketClient.swift in Sources */,
 			);
