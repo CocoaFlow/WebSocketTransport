@@ -6,45 +6,55 @@
 //  Copyright (c) 2014 CocoaFlow. All rights reserved.
 //
 
-class FakeWebSocketClient: NSObject, SRWebSocketDelegate {
+class FakeWebSocketClient: NSObject, WebsocketDelegate {
     
-    private let webSocket: SRWebSocket
+    private let webSocket: Websocket
     
-    typealias WebSocketDidOpenHandler = (webSocket: FakeWebSocketClient) -> Void
-    typealias WebSocketDidReceiveMessageHandler = (message: AnyObject!) -> Void
+    typealias WebSocketDidConnectHandler = (webSocket: FakeWebSocketClient) -> Void
+    typealias WebSocketDidReceiveMessageHandler = (message: String) -> Void
     
-    let webSocketDidOpenHandler: WebSocketDidOpenHandler
+    let webSocketDidConnectHandler: WebSocketDidConnectHandler
     let webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler
     
-    init(webSocketDidOpenHandler: WebSocketDidOpenHandler = { (webSocket) in }, webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler = { (message) in } ) {
+    init(webSocketDidConnectHandler: WebSocketDidConnectHandler = { (webSocket) in }, webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler = { (message) in } ) {
         let url = NSURL.URLWithString("ws://localhost:3569")
-        self.webSocket = SRWebSocket(URL: url)
-        self.webSocketDidOpenHandler = webSocketDidOpenHandler
+        self.webSocket = Websocket(url: url)
+        self.webSocketDidConnectHandler = webSocketDidConnectHandler
         self.webSocketDidReceiveMessageHandler = webSocketDidReceiveMessageHandler
         super.init()
         self.webSocket.delegate = self
-        self.webSocket.open()
+        self.webSocket.connect()
     }
     
-    func webSocketDidOpen(webSocket: SRWebSocket!) {
-        self.webSocketDidOpenHandler(webSocket: self)
+    func send(message: String) {
+        self.webSocket.writeString(message)
     }
     
-    func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError!) {
-        if (error != nil) {
+    func disconnect() {
+        self.webSocket.disconnect()
+    }
+    
+    // MARK: - WebsocketDelegate
+    
+    func websocketDidConnect() {
+        self.webSocketDidConnectHandler(webSocket: self)
+    }
+    
+    func websocketDidDisconnect(error: NSError?) {
+        if let maybeError = error {
             println(error)
         }
     }
     
-    func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject!) {
-        self.webSocketDidReceiveMessageHandler(message: message)
+    func websocketDidWriteError(error: NSError?) {
+        if let maybeError = error {
+            println(error)
+        }
     }
     
-    func send(data: String) {
-        self.webSocket.send(data)
+    func websocketDidReceiveMessage(text: String) {
+        self.webSocketDidReceiveMessageHandler(message: text)
     }
     
-    func close() {
-        self.webSocket.close()
-    }
+    func websocketDidReceiveData(data: NSData) {}
 }
