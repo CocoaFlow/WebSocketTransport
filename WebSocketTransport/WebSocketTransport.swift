@@ -22,7 +22,7 @@ public struct WebSocketTransport: Transport {
     public var messageReceiver: MessageReceiver?
     
     // TODO: Make port option in protocol
-    public init(var _ messageReceiver: MessageReceiverWorkaround) {
+    public init(var _ messageReceiver: MessageReceiverWithSender) {
         
         self.messageReceiver = messageReceiver
         messageReceiver.messageSender = self

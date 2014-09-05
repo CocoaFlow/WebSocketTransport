@@ -10,7 +10,7 @@ import Foundation
 import MessageTransfer
 import JSONLib
 
-class FakeMessageReceiver: MessageReceiverWorkaround {
+class FakeMessageReceiver: MessageReceiverWithSender {
     
     typealias Verification = (channel: String, topic: String, payload: JSON) -> Void
     
