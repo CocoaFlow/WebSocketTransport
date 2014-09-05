@@ -21,6 +21,12 @@ class FakeMessageReceiver: MessageReceiverWorkaround {
         self.verify = verify
     }
     
+    func send(channel: String, _ topic: String, _ payload: JSON) {
+        if let sender = self.messageSender {
+            sender.send(channel, topic, payload)
+        }
+    }
+    
     func receive(channel: String, _ topic: String, _ payload: JSON) {
         self.verify(channel: channel, topic: topic, payload: payload)
     }
