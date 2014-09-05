@@ -61,7 +61,7 @@ public struct WebSocketTransport: Transport {
             "payload": payload
         ]
         
-        let message = messageJson.stringify() as NSString
+        let message = messageJson.stringify(indent: "") as NSString
         let messageData = message.dataUsingEncoding(NSUTF8StringEncoding)
         
         self.webSocketServer.pushToAll(messageData)
