@@ -54,6 +54,16 @@ public struct WebSocketTransport: Transport {
     }
     
     public func send(channel: String, _ topic: String, _ payload: JSON) {
-        // TODO
+
+        let messageJson: JSON = [
+            "protocol": JSValue(channel),
+            "command": JSValue(topic),
+            "payload": payload
+        ]
+        
+        let message = messageJson.stringify() as NSString
+        let messageData = message.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        self.webSocketServer.pushToAll(messageData)
     }
 }
