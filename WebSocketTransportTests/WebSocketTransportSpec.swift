@@ -49,16 +49,25 @@ class WebSocketTransportSpec: QuickSpec {
             
             describe("sent a message by the message receiver") {
                 
-                pending("should send a message") {
+                it("should send a message") {
                     let receiverChannel = "channel"
                     let receiverTopic = "topic"
                     let receiverPayload = "{\"key\":\"value\"}"
+
+                    let expectedMessage = "{\"protocol\":\"\(receiverChannel)\",\"command\":\"\(receiverTopic)\",\"payload\":\(receiverPayload)}"
+                    var transportMessage: String!
                     
                     let fakeMessageReceiver = FakeMessageReceiver()
                     let transport = WebSocketTransport(fakeMessageReceiver)
                     
+                    let fakeWebSocketClient = FakeWebSocketClient(webSocketDidReceiveMessageHandler: { (message: AnyObject!) in
+                        transportMessage = message as String
+                    })
+                    
                     fakeMessageReceiver.messageSender = transport
                     fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
+                    
+                    expect(transportMessage).toEventually(equal(expectedMessage))
                 }
             }
         }
