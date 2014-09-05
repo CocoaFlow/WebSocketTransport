@@ -24,6 +24,8 @@
 		<string>github.com:CocoaFlow/MessageTransfer.git</string>
 		<key>ABB939127996C66F7E852A780552ADEEF03C6B13</key>
 		<string>github.com:square/SocketRocket.git</string>
+		<key>C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D</key>
+		<string>github.com:daltoniam/starscream.git</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
 		<string>github.com:Quick/Quick.git</string>
 	</dict>
@@ -45,6 +47,8 @@
 		<string>../../External/Transport/External/MessageTransfer</string>
 		<key>ABB939127996C66F7E852A780552ADEEF03C6B13</key>
 		<string>../../External/SocketRocket</string>
+		<key>C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D</key>
+		<string>../../External/starscream/</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
 		<string>../..External/Quick</string>
 	</dict>
@@ -103,6 +107,14 @@
 			<string>ABB939127996C66F7E852A780552ADEEF03C6B13</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SocketRocket</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C86D95FCAEB1FEA0694B5D4AC7241D7E5F42F31D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>starscream</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
