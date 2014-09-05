@@ -14,6 +14,11 @@ import JSONLib
 public struct WebSocketTransport: Transport {
     
     private let webSocketServer = BLWebSocketsServer.sharedInstance()
+    
+    private let channelKey = "protocol"
+    private let topicKey = "command"
+    private let payloadKey = "payload"
+    
     public var messageReceiver: MessageReceiver?
     
     // TODO: Make port option in protocol
@@ -28,9 +33,9 @@ public struct WebSocketTransport: Transport {
                 let jsonString = NSString(data: data, encoding: UInt())
 
                 if let json = JSON.parse(jsonString).value {
-                    let channel = json["protocol"].string
-                    let topic = json["command"].string
-                    let jsonPayload: JSON = json["payload"]
+                    let channel = json[self.channelKey].string
+                    let topic = json[self.topicKey].string
+                    let jsonPayload: JSON = json[self.payloadKey]
                     let payload = jsonPayload.object
                     
                     switch (channel, topic, payload) {
@@ -56,9 +61,9 @@ public struct WebSocketTransport: Transport {
     public func send(channel: String, _ topic: String, _ payload: JSON) {
 
         let messageJson: JSON = [
-            "protocol": JSValue(channel),
-            "command": JSValue(topic),
-            "payload": payload
+            self.channelKey: JSValue(channel),
+            self.topicKey: JSValue(topic),
+            self.payloadKey: payload
         ]
         
         let message = messageJson.stringify(indent: "") as NSString
