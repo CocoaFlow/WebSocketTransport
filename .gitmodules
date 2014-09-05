@@ -10,6 +10,3 @@
 [submodule "External/BLWebSocketsServer"]
 	path = External/BLWebSocketsServer
 	url = git@github.com:benlodotcom/BLWebSocketsServer.git
-[submodule "External/SocketRocket"]
-	path = External/SocketRocket
-	url = git@github.com:square/SocketRocket.git
