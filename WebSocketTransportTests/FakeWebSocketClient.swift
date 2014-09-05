@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 CocoaFlow. All rights reserved.
 //
 
+import Foundation
+
 class FakeWebSocketClient: NSObject, WebsocketDelegate {
     
     private let webSocket: Websocket
