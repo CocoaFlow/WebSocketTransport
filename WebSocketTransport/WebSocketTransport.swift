@@ -46,7 +46,7 @@ public struct WebSocketTransport: Transport {
             return nil
         }
         
-        self.webSocketServer.startListeningOnPort(3569, withProtocolName: nil) { (error) in
+        self.webSocketServer.startListeningOnPort(3569, withProtocolName: "") { (error) in
             if (error != nil) {
                 println(error)
             }

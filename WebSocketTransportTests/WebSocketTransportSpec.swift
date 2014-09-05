@@ -60,9 +60,9 @@ class WebSocketTransportSpec: QuickSpec {
                     let fakeMessageReceiver = FakeMessageReceiver()
                     let transport = WebSocketTransport(fakeMessageReceiver)
                     
-                    let fakeWebSocketClient = FakeWebSocketClient(webSocketDidReceiveMessageHandler: { (message: String) in
+                    let fakeWebSocketClient = FakeWebSocketClient{ message in
                         transportMessage = message
-                    })
+                    }
                     
                     fakeMessageReceiver.messageSender = transport
                     fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
