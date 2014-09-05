@@ -37,11 +37,9 @@ class WebSocketTransportSpec: QuickSpec {
 
                     let transport = WebSocketTransport(fakeMessageReceiver)
                     
-                    let webSocketDidOpenHandler = { (webSocket: FakeWebSocketClient) in
+                    let fakeWebSocketClient = FakeWebSocketClient { webSocket in
                         webSocket.send(transportData)
                     }
-                    
-                    let fakeWebSocketClient = FakeWebSocketClient(webSocketDidOpenHandler)
                     
                     expect(receiverChannel).toEventually(equal(transportChannel))
                     expect(receiverTopic).toEventually(equal(transportTopic))
