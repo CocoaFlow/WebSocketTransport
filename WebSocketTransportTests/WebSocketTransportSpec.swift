@@ -55,7 +55,9 @@ class WebSocketTransportSpec: QuickSpec {
                     let receiverPayload = "{\"key\":\"value\"}"
 
                     let expectedMessage = "{\"protocol\":\"\(receiverChannel)\",\"command\":\"\(receiverTopic)\",\"payload\":\(receiverPayload)}"
-                    var transportMessage: String!
+                    
+                    var jsonExpectedMessage = JSON.parse(expectedMessage).value
+                    var jsonTransportMessage: JSON!
                     
                     let fakeMessageReceiver = FakeMessageReceiver()
                     let transport = WebSocketTransport(fakeMessageReceiver)
@@ -64,10 +66,10 @@ class WebSocketTransportSpec: QuickSpec {
                         fakeMessageReceiver.messageSender = transport
                         fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
                     }, { message in
-                        transportMessage = message
+                        jsonTransportMessage = JSON.parse(message).value
                     })
                     
-                    expect(transportMessage).toEventually(equal(expectedMessage))
+                    expect(jsonTransportMessage).toEventually(equal(jsonExpectedMessage))
                 }
             }
         }
