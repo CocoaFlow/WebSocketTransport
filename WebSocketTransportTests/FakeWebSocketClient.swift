@@ -13,28 +13,22 @@ class FakeWebSocketClient: NSObject, WebsocketDelegate {
     typealias WebSocketDidConnectHandler = (webSocket: FakeWebSocketClient) -> Void
     typealias WebSocketDidReceiveMessageHandler = (message: String) -> Void
     
-    private let webSocketDidConnectHandler: WebSocketDidConnectHandler?
+    private let webSocketDidConnectHandler: WebSocketDidConnectHandler
     private let webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?
     
-    init(webSocketDidConnectHandler: WebSocketDidConnectHandler?, webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?) {
+    init(webSocketDidConnectHandler: WebSocketDidConnectHandler, webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?) {
         let url = NSURL.URLWithString("ws://localhost:3569")
         self.webSocket = Websocket(url: url)
-        super.init()
-        webSocket.headers = ["Sec-WebSocket-Protocol": ""]
         self.webSocketDidConnectHandler = webSocketDidConnectHandler
+        super.init()
         self.webSocketDidReceiveMessageHandler = webSocketDidReceiveMessageHandler
-        println(self.webSocketDidReceiveMessageHandler)
+        self.webSocket.headers = ["Sec-WebSocket-Protocol": ""]
         self.webSocket.delegate = self
         self.webSocket.connect()
     }
     
     convenience init(webSocketDidConnectHandler: WebSocketDidConnectHandler) {
         self.init(webSocketDidConnectHandler, nil)
-    }
-    
-    convenience init(webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler) {
-        println(webSocketDidReceiveMessageHandler)
-        self.init(nil, webSocketDidReceiveMessageHandler)
     }
     
     func send(message: String) {
@@ -48,9 +42,7 @@ class FakeWebSocketClient: NSObject, WebsocketDelegate {
     // MARK: - WebsocketDelegate
     
     func websocketDidConnect() {
-        if let handler = self.webSocketDidConnectHandler {
-            handler(webSocket: self)
-        }
+        self.webSocketDidConnectHandler(webSocket: self)
     }
     
     func websocketDidDisconnect(error: NSError?) {
@@ -66,8 +58,6 @@ class FakeWebSocketClient: NSObject, WebsocketDelegate {
     }
     
     func websocketDidReceiveMessage(text: String) {
-        println(text)
-        println (self.webSocketDidReceiveMessageHandler)
         if let handler = self.webSocketDidReceiveMessageHandler {
             handler(message: text)
         }
