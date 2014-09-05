@@ -18,6 +18,7 @@ public struct WebSocketTransport: Transport {
     
     // TODO: Make port option in protocol
     public init(var _ messageReceiver: MessageReceiverWorkaround) {
+        
         self.messageReceiver = messageReceiver
         messageReceiver.messageSender = self
         
