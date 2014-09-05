@@ -8,6 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		DA1B71AE19B6A2F300933BAF /* FakeWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */; };
+		DA4B38D219BA821300DC2AB4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D26219AEE68400E268AF /* Nimble.framework */; };
+		DA4B38D319BA821300DC2AB4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA74D25319AEE66400E268AF /* Quick.framework */; };
+		DA4B38D419BA822500DC2AB4 /* Websocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7C62A219B98C0B001EA406 /* Websocket.swift */; };
+		DA4B38D519BA822500DC2AB4 /* WebSocketTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674BDB19AD91730064D5A4 /* WebSocketTransportSpec.swift */; };
+		DA4B38D619BA822500DC2AB4 /* FakeWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */; };
+		DA4B38D719BA822500DC2AB4 /* FakeMessageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA777A19B6E3C6002D650F /* FakeMessageReceiver.swift */; };
+		DA4B38D819BA824400DC2AB4 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA674BEE19AD93DD0064D5A4 /* Transport.framework */; };
+		DA4B38DA19BA824E00DC2AB4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B38D919BA824E00DC2AB4 /* libz.dylib */; };
+		DA4B38DB19BA829100DC2AB4 /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BD19B1A0F000D65A8B /* BLWebSocketsServer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA4B38DC19BA829100DC2AB4 /* base64-decode.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885BF19B1A0F000D65A8B /* base64-decode.c */; };
+		DA4B38DD19BA829100DC2AB4 /* BLAsyncMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C119B1A0F000D65A8B /* BLAsyncMessageQueue.m */; };
+		DA4B38DE19BA829100DC2AB4 /* client-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C219B1A0F000D65A8B /* client-handshake.c */; };
+		DA4B38DF19BA829100DC2AB4 /* client-parser.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C319B1A0F000D65A8B /* client-parser.c */; };
+		DA4B38E019BA829100DC2AB4 /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C419B1A0F000D65A8B /* client.c */; };
+		DA4B38E119BA829100DC2AB4 /* daemonize.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C519B1A0F000D65A8B /* daemonize.c */; };
+		DA4B38E219BA829100DC2AB4 /* extension-deflate-frame.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C619B1A0F000D65A8B /* extension-deflate-frame.c */; };
+		DA4B38E319BA829100DC2AB4 /* extension-deflate-stream.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885C819B1A0F000D65A8B /* extension-deflate-stream.c */; };
+		DA4B38E419BA829100DC2AB4 /* extension.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CA19B1A0F000D65A8B /* extension.c */; };
+		DA4B38E519BA829100DC2AB4 /* getifaddrs.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CB19B1A0F000D65A8B /* getifaddrs.c */; };
+		DA4B38E619BA829100DC2AB4 /* handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CD19B1A0F000D65A8B /* handshake.c */; };
+		DA4B38E719BA829100DC2AB4 /* libwebsockets.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885CE19B1A0F000D65A8B /* libwebsockets.c */; };
+		DA4B38E819BA829100DC2AB4 /* output.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D019B1A0F000D65A8B /* output.c */; };
+		DA4B38E919BA829100DC2AB4 /* parsers.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D119B1A0F000D65A8B /* parsers.c */; };
+		DA4B38EA19BA829100DC2AB4 /* server-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D319B1A0F000D65A8B /* server-handshake.c */; };
+		DA4B38EB19BA829100DC2AB4 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D419B1A0F000D65A8B /* server.c */; };
+		DA4B38EC19BA829100DC2AB4 /* sha-1.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE885D519B1A0F000D65A8B /* sha-1.c */; };
+		DA4B38ED19BA82A200DC2AB4 /* WebSocketTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74D27719AEF3BB00E268AF /* WebSocketTransport.swift */; };
+		DA4B38EE19BA82CF00DC2AB4 /* BLWebSocketsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885BC19B1A0F000D65A8B /* BLWebSocketsServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA4B38EF19BA82CF00DC2AB4 /* BLAsyncMessageQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C019B1A0F000D65A8B /* BLAsyncMessageQueue.h */; };
+		DA4B38F019BA82CF00DC2AB4 /* extension-deflate-frame.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C719B1A0F000D65A8B /* extension-deflate-frame.h */; };
+		DA4B38F119BA82CF00DC2AB4 /* extension-deflate-stream.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885C919B1A0F000D65A8B /* extension-deflate-stream.h */; };
+		DA4B38F219BA82CF00DC2AB4 /* libwebsockets.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885CF19B1A0F000D65A8B /* libwebsockets.h */; };
+		DA4B38F319BA82CF00DC2AB4 /* private-libwebsockets.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885D219B1A0F000D65A8B /* private-libwebsockets.h */; };
+		DA4B38F419BA82E700DC2AB4 /* getifaddrs.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE885CC19B1A0F000D65A8B /* getifaddrs.h */; };
+		DA4B38F519BA82F400DC2AB4 /* WebSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = DA674BD119AD91730064D5A4 /* WebSocketTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA674BD219AD91730064D5A4 /* WebSocketTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = DA674BD119AD91730064D5A4 /* WebSocketTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA674BDC19AD91730064D5A4 /* WebSocketTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA674BDB19AD91730064D5A4 /* WebSocketTransportSpec.swift */; };
 		DA674BF519AD94240064D5A4 /* Transport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA674BEE19AD93DD0064D5A4 /* Transport.framework */; };
@@ -45,6 +80,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DA4B38CC19BA818900DC2AB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA674BC319AD91730064D5A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA4B38A919BA815200DC2AB4;
+			remoteInfo = "WebSocketTransport-iOS";
+		};
 		DA674BED19AD93DD0064D5A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DA674BE519AD93DD0064D5A4 /* Transport.xcodeproj */;
@@ -140,6 +182,9 @@
 
 /* Begin PBXFileReference section */
 		DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeWebSocketClient.swift; sourceTree = "<group>"; };
+		DA4B38AA19BA815200DC2AB4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4B38B419BA815300DC2AB4 /* WebSocketTransportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketTransportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4B38D919BA824E00DC2AB4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA674BD019AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA674BD119AD91730064D5A4 /* WebSocketTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketTransport.h; sourceTree = "<group>"; };
@@ -181,6 +226,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DA4B38A619BA815200DC2AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4B38DA19BA824E00DC2AB4 /* libz.dylib in Frameworks */,
+				DA4B38D819BA824400DC2AB4 /* Transport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4B38B119BA815300DC2AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4B38D219BA821300DC2AB4 /* Nimble.framework in Frameworks */,
+				DA4B38D319BA821300DC2AB4 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA674BC819AD91730064D5A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +268,7 @@
 		DA674BC219AD91730064D5A4 = {
 			isa = PBXGroup;
 			children = (
+				DA4B38D919BA824E00DC2AB4 /* libz.dylib */,
 				DAE885FB19B1A15C00D65A8B /* libz.dylib */,
 				DA674BCE19AD91730064D5A4 /* WebSocketTransport */,
 				DA674BD819AD91730064D5A4 /* WebSocketTransportTests */,
@@ -217,6 +281,8 @@
 			children = (
 				DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */,
 				DA674BD719AD91730064D5A4 /* WebSocketTransport-MacTests.xctest */,
+				DA4B38AA19BA815200DC2AB4 /* WebSocketTransport.framework */,
+				DA4B38B419BA815300DC2AB4 /* WebSocketTransportTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,6 +406,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		DA4B38A719BA815200DC2AB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4B38F519BA82F400DC2AB4 /* WebSocketTransport.h in Headers */,
+				DA4B38EE19BA82CF00DC2AB4 /* BLWebSocketsServer.h in Headers */,
+				DA4B38EF19BA82CF00DC2AB4 /* BLAsyncMessageQueue.h in Headers */,
+				DA4B38F019BA82CF00DC2AB4 /* extension-deflate-frame.h in Headers */,
+				DA4B38F119BA82CF00DC2AB4 /* extension-deflate-stream.h in Headers */,
+				DA4B38F419BA82E700DC2AB4 /* getifaddrs.h in Headers */,
+				DA4B38F219BA82CF00DC2AB4 /* libwebsockets.h in Headers */,
+				DA4B38F319BA82CF00DC2AB4 /* private-libwebsockets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA674BC919AD91730064D5A4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +446,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DA4B38A919BA815200DC2AB4 /* WebSocketTransport-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4B38CA19BA815300DC2AB4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-iOS" */;
+			buildPhases = (
+				DA4B38A519BA815200DC2AB4 /* Sources */,
+				DA4B38A619BA815200DC2AB4 /* Frameworks */,
+				DA4B38A719BA815200DC2AB4 /* Headers */,
+				DA4B38A819BA815200DC2AB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WebSocketTransport-iOS";
+			productName = WebSocketTransport;
+			productReference = DA4B38AA19BA815200DC2AB4 /* WebSocketTransport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA4B38B319BA815300DC2AB4 /* WebSocketTransport-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4B38CB19BA815300DC2AB4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-iOSTests" */;
+			buildPhases = (
+				DA4B38B019BA815300DC2AB4 /* Sources */,
+				DA4B38B119BA815300DC2AB4 /* Frameworks */,
+				DA4B38B219BA815300DC2AB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA4B38CD19BA818900DC2AB4 /* PBXTargetDependency */,
+			);
+			name = "WebSocketTransport-iOSTests";
+			productName = WebSocketTransportTests;
+			productReference = DA4B38B419BA815300DC2AB4 /* WebSocketTransportTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA674BDF19AD91730064D5A4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-Mac" */;
@@ -411,6 +528,12 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = CocoaFlow;
 				TargetAttributes = {
+					DA4B38A919BA815200DC2AB4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					DA4B38B319BA815300DC2AB4 = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					DA674BCB19AD91730064D5A4 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -447,6 +570,8 @@
 			targets = (
 				DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */,
 				DA674BD619AD91730064D5A4 /* WebSocketTransport-MacTests */,
+				DA4B38A919BA815200DC2AB4 /* WebSocketTransport-iOS */,
+				DA4B38B319BA815300DC2AB4 /* WebSocketTransport-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -539,6 +664,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DA4B38A819BA815200DC2AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4B38B219BA815300DC2AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA674BCA19AD91730064D5A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,6 +695,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DA4B38A519BA815200DC2AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4B38DC19BA829100DC2AB4 /* base64-decode.c in Sources */,
+				DA4B38DD19BA829100DC2AB4 /* BLAsyncMessageQueue.m in Sources */,
+				DA4B38DB19BA829100DC2AB4 /* BLWebSocketsServer.m in Sources */,
+				DA4B38DE19BA829100DC2AB4 /* client-handshake.c in Sources */,
+				DA4B38DF19BA829100DC2AB4 /* client-parser.c in Sources */,
+				DA4B38E019BA829100DC2AB4 /* client.c in Sources */,
+				DA4B38E119BA829100DC2AB4 /* daemonize.c in Sources */,
+				DA4B38E219BA829100DC2AB4 /* extension-deflate-frame.c in Sources */,
+				DA4B38E319BA829100DC2AB4 /* extension-deflate-stream.c in Sources */,
+				DA4B38E419BA829100DC2AB4 /* extension.c in Sources */,
+				DA4B38E519BA829100DC2AB4 /* getifaddrs.c in Sources */,
+				DA4B38E619BA829100DC2AB4 /* handshake.c in Sources */,
+				DA4B38E719BA829100DC2AB4 /* libwebsockets.c in Sources */,
+				DA4B38E819BA829100DC2AB4 /* output.c in Sources */,
+				DA4B38E919BA829100DC2AB4 /* parsers.c in Sources */,
+				DA4B38EA19BA829100DC2AB4 /* server-handshake.c in Sources */,
+				DA4B38EB19BA829100DC2AB4 /* server.c in Sources */,
+				DA4B38EC19BA829100DC2AB4 /* sha-1.c in Sources */,
+				DA4B38ED19BA82A200DC2AB4 /* WebSocketTransport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4B38B019BA815300DC2AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4B38D519BA822500DC2AB4 /* WebSocketTransportSpec.swift in Sources */,
+				DA4B38D719BA822500DC2AB4 /* FakeMessageReceiver.swift in Sources */,
+				DA4B38D419BA822500DC2AB4 /* Websocket.swift in Sources */,
+				DA4B38D619BA822500DC2AB4 /* FakeWebSocketClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA674BC719AD91730064D5A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,6 +772,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DA4B38CD19BA818900DC2AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA4B38A919BA815200DC2AB4 /* WebSocketTransport-iOS */;
+			targetProxy = DA4B38CC19BA818900DC2AB4 /* PBXContainerItemProxy */;
+		};
 		DA9F196419AEF6F00018BF48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */;
@@ -604,6 +785,86 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DA4B38BA19BA815300DC2AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = WebSocketTransport/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = WebSocketTransport;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA4B38BB19BA815300DC2AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = WebSocketTransport/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = WebSocketTransport;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA4B38BC19BA815300DC2AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WebSocketTransportTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA4B38BD19BA815300DC2AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WebSocketTransportTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		DA674BDD19AD91730064D5A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -771,6 +1032,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DA4B38CA19BA815300DC2AB4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4B38BA19BA815300DC2AB4 /* Debug */,
+				DA4B38BB19BA815300DC2AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA4B38CB19BA815300DC2AB4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4B38BC19BA815300DC2AB4 /* Debug */,
+				DA4B38BD19BA815300DC2AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DA674BC619AD91730064D5A4 /* Build configuration list for PBXProject "WebSocketTransport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
