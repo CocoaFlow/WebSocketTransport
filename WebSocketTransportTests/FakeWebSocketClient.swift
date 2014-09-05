@@ -11,19 +11,19 @@ class FakeWebSocketClient: NSObject, SRWebSocketDelegate {
     private let webSocket: SRWebSocket
     
     typealias WebSocketDidOpenHandler = (webSocket: FakeWebSocketClient) -> Void
-    let webSocketDidOpenHandler: WebSocketDidOpenHandler
+    typealias WebSocketDidReceiveMessageHandler = (message: AnyObject!) -> Void
     
-    init(webSocketDidOpenHandler: WebSocketDidOpenHandler) {
+    let webSocketDidOpenHandler: WebSocketDidOpenHandler
+    let webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler
+    
+    init(webSocketDidOpenHandler: WebSocketDidOpenHandler = { (webSocket) in }, webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler = { (message) in } ) {
         let url = NSURL.URLWithString("ws://localhost:3569")
         self.webSocket = SRWebSocket(URL: url)
         self.webSocketDidOpenHandler = webSocketDidOpenHandler
+        self.webSocketDidReceiveMessageHandler = webSocketDidReceiveMessageHandler
         super.init()
         self.webSocket.delegate = self
         self.webSocket.open()
-    }
-    
-    func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject!) {
-        // TODO
     }
     
     func webSocketDidOpen(webSocket: SRWebSocket!) {
@@ -34,6 +34,10 @@ class FakeWebSocketClient: NSObject, SRWebSocketDelegate {
         if (error != nil) {
             println(error)
         }
+    }
+    
+    func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject!) {
+        self.webSocketDidReceiveMessageHandler(message: message)
     }
     
     func send(data: String) {
