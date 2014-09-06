@@ -34,10 +34,11 @@ class WebSocketTransportSpec: QuickSpec {
                         receiverTopic = topic
                         receiverPayload = payload
                     }
-
-                    let transport = WebSocketTransport(fakeMessageReceiver)
                     
-                    let fakeWebSocketClient = FakeWebSocketClient(3569) { webSocket in
+                    let port: Int32 = 3569
+                    let transport = WebSocketTransport(port, fakeMessageReceiver)
+                    
+                    let fakeWebSocketClient = FakeWebSocketClient(port) { webSocket in
                         webSocket.send(transportData)
                     }
                     
@@ -60,9 +61,10 @@ class WebSocketTransportSpec: QuickSpec {
                     var jsonTransportMessage: JSON!
                     
                     let fakeMessageReceiver = FakeMessageReceiver()
-                    let transport = WebSocketTransport(fakeMessageReceiver)
+                    let port: Int32 = 3569
+                    let transport = WebSocketTransport(port, fakeMessageReceiver)
                     
-                    let fakeWebSocketClient = FakeWebSocketClient(3569, { webSocket in
+                    let fakeWebSocketClient = FakeWebSocketClient(port, { webSocket in
                         fakeMessageReceiver.messageSender = transport
                         fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
                     }, { message in
