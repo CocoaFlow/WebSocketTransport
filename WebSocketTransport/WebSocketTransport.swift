@@ -21,7 +21,7 @@ public struct WebSocketTransport: Transport {
     
     public var messageReceiver: MessageReceiver?
     
-    public init(_ port: Int32, var _ messageReceiver: MessageReceiverWithSender) {
+    public init(_ port: Int32, _ protocolName: String, var _ messageReceiver: MessageReceiverWithSender) {
         
         self.messageReceiver = messageReceiver
         messageReceiver.messageSender = self
@@ -49,7 +49,7 @@ public struct WebSocketTransport: Transport {
             return nil
         }
         
-        self.webSocketServer.startListeningOnPort(port, withProtocolName: "") { (error) in
+        self.webSocketServer.startListeningOnPort(port, withProtocolName: protocolName) { (error) in
             if (error != nil) {
                 println(error)
             }

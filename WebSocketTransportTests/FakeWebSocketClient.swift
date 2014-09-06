@@ -18,19 +18,19 @@ class FakeWebSocketClient: NSObject, WebsocketDelegate {
     private let webSocketDidConnectHandler: WebSocketDidConnectHandler
     private let webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?
     
-    init(_ port: Int32, _ webSocketDidConnectHandler: WebSocketDidConnectHandler, _ webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?) {
+    init(_ port: Int32, _ protocolName: String, _ webSocketDidConnectHandler: WebSocketDidConnectHandler, _ webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?) {
         let url = NSURL.URLWithString("ws://localhost:\(port)")
         self.webSocket = Websocket(url: url)
         self.webSocketDidConnectHandler = webSocketDidConnectHandler
         super.init()
         self.webSocketDidReceiveMessageHandler = webSocketDidReceiveMessageHandler
-        self.webSocket.headers = ["Sec-WebSocket-Protocol": ""]
+        self.webSocket.headers = ["Sec-WebSocket-Protocol":  protocolName]
         self.webSocket.delegate = self
         self.webSocket.connect()
     }
     
-    convenience init(_ port: Int32, _ webSocketDidConnectHandler: WebSocketDidConnectHandler) {
-        self.init(port, webSocketDidConnectHandler, nil)
+    convenience init(_ port: Int32, _ protocolName: String, _ webSocketDidConnectHandler: WebSocketDidConnectHandler) {
+        self.init(port, protocolName, webSocketDidConnectHandler, nil)
     }
     
     func send(message: String) {

@@ -36,9 +36,10 @@ class WebSocketTransportSpec: QuickSpec {
                     }
                     
                     let port: Int32 = 3569
-                    let transport = WebSocketTransport(port, fakeMessageReceiver)
+                    let protocolName = "CocoaFlow"
+                    let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
                     
-                    let fakeWebSocketClient = FakeWebSocketClient(port) { webSocket in
+                    let fakeWebSocketClient = FakeWebSocketClient(port, protocolName) { webSocket in
                         webSocket.send(transportData)
                     }
                     
@@ -62,9 +63,10 @@ class WebSocketTransportSpec: QuickSpec {
                     
                     let fakeMessageReceiver = FakeMessageReceiver()
                     let port: Int32 = 3569
-                    let transport = WebSocketTransport(port, fakeMessageReceiver)
+                    let protocolName = "CocoaFlow"
+                    let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
                     
-                    let fakeWebSocketClient = FakeWebSocketClient(port, { webSocket in
+                    let fakeWebSocketClient = FakeWebSocketClient(port, protocolName, { webSocket in
                         fakeMessageReceiver.messageSender = transport
                         fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
                     }, { message in
