@@ -29,7 +29,7 @@ public struct WebSocketTransport: Transport {
         self.webSocketServer.setHandleRequestBlock { (data) -> NSData! in
             
             if let receiver = self.messageReceiver {
-                let jsonString = NSString(data: data, encoding: UInt())
+                let jsonString = NSString(data: data, encoding: NSUTF8StringEncoding)
 
                 if let json = JSON.parse(jsonString).value {
                     let channel = json[self.channelKey].string
