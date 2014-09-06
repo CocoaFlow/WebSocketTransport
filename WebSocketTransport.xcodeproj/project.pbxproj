@@ -183,7 +183,7 @@
 /* Begin PBXFileReference section */
 		DA1B71AD19B6A2F300933BAF /* FakeWebSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeWebSocketClient.swift; sourceTree = "<group>"; };
 		DA4B38AA19BA815200DC2AB4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA4B38B419BA815300DC2AB4 /* WebSocketTransportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketTransportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4B38B419BA815300DC2AB4 /* WebSocketTransport-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WebSocketTransport-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4B38D919BA824E00DC2AB4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebSocketTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA674BD019AD91730064D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				DA674BCC19AD91730064D5A4 /* WebSocketTransport.framework */,
 				DA674BD719AD91730064D5A4 /* WebSocketTransport-MacTests.xctest */,
 				DA4B38AA19BA815200DC2AB4 /* WebSocketTransport.framework */,
-				DA4B38B419BA815300DC2AB4 /* WebSocketTransportTests.xctest */,
+				DA4B38B419BA815300DC2AB4 /* WebSocketTransport-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -479,7 +479,7 @@
 			);
 			name = "WebSocketTransport-iOSTests";
 			productName = WebSocketTransportTests;
-			productReference = DA4B38B419BA815300DC2AB4 /* WebSocketTransportTests.xctest */;
+			productReference = DA4B38B419BA815300DC2AB4 /* WebSocketTransport-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DA674BCB19AD91730064D5A4 /* WebSocketTransport-Mac */ = {
@@ -1035,6 +1035,7 @@
 				DA4B38BB19BA815300DC2AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA4B38CB19BA815300DC2AB4 /* Build configuration list for PBXNativeTarget "WebSocketTransport-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1043,6 +1044,7 @@
 				DA4B38BD19BA815300DC2AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA674BC619AD91730064D5A4 /* Build configuration list for PBXProject "WebSocketTransport" */ = {
 			isa = XCConfigurationList;
