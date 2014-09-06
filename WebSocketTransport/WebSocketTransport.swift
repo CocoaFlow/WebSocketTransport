@@ -45,8 +45,7 @@ public struct WebSocketTransport: Transport {
                     }
                 }
             }
-            
-            // TODO: Determine if returning nil is valid - "Attempt to write empty data on the websocket"
+
             return nil
         }
         
