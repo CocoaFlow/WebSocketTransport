@@ -49,7 +49,7 @@ class WebSocketTransportSpec: QuickSpec {
                 }
             }
             
-            describe("sent a message by the message receiver") {
+            describe("sent a message") {
                 
                 it("should send a message") {
                     let receiverChannel = "channel"
