@@ -30,7 +30,7 @@ public struct WebSocketTransport: Transport {
             
             if let receiver = self.messageReceiver {
                 let jsonString = NSString(data: data, encoding: NSUTF8StringEncoding)
-
+                
                 if let json = JSON.parse(jsonString).value {
                     let channel = json[self.channelKey].string
                     let topic = json[self.topicKey].string
@@ -40,6 +40,8 @@ public struct WebSocketTransport: Transport {
                     switch (channel, topic, payload) {
                     case let (.Some(channel), .Some(topic), .Some(payload)):
                         receiver.receive(channel, topic, jsonPayload)
+                    case let (.Some(channel), .Some(topic), .None):
+                        receiver.receive(channel, topic, nil)
                     default:
                         break
                     }
@@ -56,12 +58,18 @@ public struct WebSocketTransport: Transport {
         }
     }
     
-    public func send(channel: String, _ topic: String, _ payload: JSON) {
+    public func send(channel: String, _ topic: String, _ payload: JSON?) {
+        
+        var jsonPayload: JSON = nil
+
+        if let maybePayload = payload {
+            jsonPayload = maybePayload
+        }
 
         let messageJson: JSON = [
             self.channelKey: JSValue(channel),
             self.topicKey: JSValue(topic),
-            self.payloadKey: payload
+            self.payloadKey: jsonPayload
         ]
         
         let message = messageJson.stringify(indent: "") as NSString
