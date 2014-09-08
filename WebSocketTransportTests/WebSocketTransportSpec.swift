@@ -18,62 +18,128 @@ class WebSocketTransportSpec: QuickSpec {
         describe("WebSocket transport") {
                         
             describe("receiving a message") {
-            
-                it("should receive a message in the message receiver") {
-                    let transportChannel = "channel"
-                    let transportTopic = "topic"
-                    let transportPayload = "{\"key\":\"value\"}"
-                    let transportData = "{\"protocol\":\"\(transportChannel)\",\"command\":\"\(transportTopic)\",\"payload\":\(transportPayload)}"
+                
+                context("without a payload") {
                     
-                    var receiverChannel: String!
-                    var receiverTopic: String!
-                    var receiverPayload: JSON!
-                    
-                    let fakeMessageReceiver = FakeMessageReceiver() { (channel, topic, payload) in
-                        receiverChannel = channel
-                        receiverTopic = topic
-                        receiverPayload = payload
+                    it("should receive a message in the message receiver") {
+                        let transportChannel = "channel"
+                        let transportTopic = "topic"
+                        let transportPayload = "null"
+                        let transportData = "{\"protocol\":\"\(transportChannel)\",\"command\":\"\(transportTopic)\",\"payload\":\(transportPayload)}"
+                        
+                        var receiverChannel: String!
+                        var receiverTopic: String!
+                        var receiverPayload: JSON?
+                        
+                        let fakeMessageReceiver = FakeMessageReceiver() { (channel, topic, payload) in
+                            receiverChannel = channel
+                            receiverTopic = topic
+                            receiverPayload = payload
+                        }
+                        
+                        let port: Int32 = 3569
+                        let protocolName = "CocoaFlow"
+                        let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
+                        
+                        let fakeWebSocketClient = FakeWebSocketClient(port, protocolName) { webSocket in
+                            webSocket.send(transportData)
+                        }
+                        
+                        expect(receiverChannel).toEventually(equal(transportChannel))
+                        expect(receiverTopic).toEventually(equal(transportTopic))
+                        expect(receiverPayload).toEventually(beNil())
                     }
-                    
-                    let port: Int32 = 3569
-                    let protocolName = "CocoaFlow"
-                    let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
-                    
-                    let fakeWebSocketClient = FakeWebSocketClient(port, protocolName) { webSocket in
-                        webSocket.send(transportData)
+                }
+                
+                context("with a payload") {
+                
+                    it("should receive a message in the message receiver") {
+                        let transportChannel = "channel"
+                        let transportTopic = "topic"
+                        let transportPayload = "{\"key\":\"value\"}"
+                        let transportData = "{\"protocol\":\"\(transportChannel)\",\"command\":\"\(transportTopic)\",\"payload\":\(transportPayload)}"
+                        
+                        var receiverChannel: String!
+                        var receiverTopic: String!
+                        var receiverPayload: JSON?
+                        
+                        let fakeMessageReceiver = FakeMessageReceiver() { (channel, topic, payload) in
+                            receiverChannel = channel
+                            receiverTopic = topic
+                            receiverPayload = payload
+                        }
+                        
+                        let port: Int32 = 3569
+                        let protocolName = "CocoaFlow"
+                        let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
+                        
+                        let fakeWebSocketClient = FakeWebSocketClient(port, protocolName) { webSocket in
+                            webSocket.send(transportData)
+                        }
+                        
+                        expect(receiverChannel).toEventually(equal(transportChannel))
+                        expect(receiverTopic).toEventually(equal(transportTopic))
+                        expect(receiverPayload).toEventually(equal(JSON.parse(transportPayload).value))
                     }
-                    
-                    expect(receiverChannel).toEventually(equal(transportChannel))
-                    expect(receiverTopic).toEventually(equal(transportTopic))
-                    expect(receiverPayload).toEventually(equal(JSON.parse(transportPayload).value))
                 }
             }
             
             describe("sent a message") {
                 
-                it("should send a message") {
-                    let receiverChannel = "channel"
-                    let receiverTopic = "topic"
-                    let receiverPayload = "{\"key\":\"value\"}"
+                context("without a payload") {
+                    
+                    it("should send a message") {
+                        let receiverChannel = "channel"
+                        let receiverTopic = "topic"
+                        let receiverPayload = "null"
+                        
+                        let expectedMessage = "{\"protocol\":\"\(receiverChannel)\",\"command\":\"\(receiverTopic)\",\"payload\":\(receiverPayload)}"
+                        
+                        var jsonExpectedMessage = JSON.parse(expectedMessage).value
+                        var jsonTransportMessage: JSON!
+                        
+                        let fakeMessageReceiver = FakeMessageReceiver()
+                        let port: Int32 = 3569
+                        let protocolName = "CocoaFlow"
+                        let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
+                        
+                        let fakeWebSocketClient = FakeWebSocketClient(port, protocolName, { webSocket in
+                            fakeMessageReceiver.messageSender = transport
+                            fakeMessageReceiver.send(receiverChannel, receiverTopic, nil)
+                        }, { message in
+                            jsonTransportMessage = JSON.parse(message).value
+                        })
+                        
+                        expect(jsonTransportMessage).toEventually(equal(jsonExpectedMessage))
+                    }
+                }
+                
+                context("with a payload") {
+                
+                    it("should send a message") {
+                        let receiverChannel = "channel"
+                        let receiverTopic = "topic"
+                        let receiverPayload = "{\"key\":\"value\"}"
 
-                    let expectedMessage = "{\"protocol\":\"\(receiverChannel)\",\"command\":\"\(receiverTopic)\",\"payload\":\(receiverPayload)}"
-                    
-                    var jsonExpectedMessage = JSON.parse(expectedMessage).value
-                    var jsonTransportMessage: JSON!
-                    
-                    let fakeMessageReceiver = FakeMessageReceiver()
-                    let port: Int32 = 3569
-                    let protocolName = "CocoaFlow"
-                    let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
-                    
-                    let fakeWebSocketClient = FakeWebSocketClient(port, protocolName, { webSocket in
-                        fakeMessageReceiver.messageSender = transport
-                        fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
-                    }, { message in
-                        jsonTransportMessage = JSON.parse(message).value
-                    })
-                    
-                    expect(jsonTransportMessage).toEventually(equal(jsonExpectedMessage))
+                        let expectedMessage = "{\"protocol\":\"\(receiverChannel)\",\"command\":\"\(receiverTopic)\",\"payload\":\(receiverPayload)}"
+                        
+                        var jsonExpectedMessage = JSON.parse(expectedMessage).value
+                        var jsonTransportMessage: JSON!
+                        
+                        let fakeMessageReceiver = FakeMessageReceiver()
+                        let port: Int32 = 3569
+                        let protocolName = "CocoaFlow"
+                        let transport = WebSocketTransport(port, protocolName, fakeMessageReceiver)
+                        
+                        let fakeWebSocketClient = FakeWebSocketClient(port, protocolName, { webSocket in
+                            fakeMessageReceiver.messageSender = transport
+                            fakeMessageReceiver.send(receiverChannel, receiverTopic, JSON.parse(receiverPayload).value!)
+                        }, { message in
+                            jsonTransportMessage = JSON.parse(message).value
+                        })
+                        
+                        expect(jsonTransportMessage).toEventually(equal(jsonExpectedMessage))
+                    }
                 }
             }
         }
