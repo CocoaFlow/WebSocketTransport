@@ -19,7 +19,7 @@ class FakeWebSocketClient: NSObject, WebsocketDelegate {
     private let webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?
     
     init(_ port: Int32, _ protocolName: String, _ webSocketDidConnectHandler: WebSocketDidConnectHandler, _ webSocketDidReceiveMessageHandler: WebSocketDidReceiveMessageHandler?) {
-        let url = NSURL.URLWithString("ws://localhost:\(port)")
+        let url = NSURL(string: "ws://localhost:\(port)")
         self.webSocket = Websocket(url: url)
         self.webSocketDidConnectHandler = webSocketDidConnectHandler
         super.init()
